@@ -5,3 +5,4 @@ faiss-cpu
 tiktoken
 streamlit-chat
 streamlit
+chromadb

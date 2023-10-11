@@ -5,7 +5,6 @@ from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.document_loaders import CSVLoader
-from langchain.schema import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
