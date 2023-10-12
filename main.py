@@ -36,19 +36,12 @@ prompt = PromptTemplate(template=systemtemplate, input_variables=["context", "qu
 chain_type_kwargs = {"prompt": prompt}
 chain = RetrievalQA.from_chain_type(llm=OpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()]), chain_type="stuff", retriever=docsearch.vectorstore.as_retriever(), chain_type_kwargs=chain_type_kwargs)
 
-# query = """
-# Hi,
-# I want to buy 10 alarm clocks, how much is it?
-# """
-
-# response = chain.run(query)
-
 def main():
     st.set_page_config(
         page_title="RFP Generator", page_icon="🤖", layout="centered", initial_sidebar_state="auto"
     )
     st.header("RFP Generator")
-    message = st.text_area("Example: 'Who is Elfie.co founders?', 'how big is their team?', 'what is elfie features?'")
+    message = st.text_area("Example: 'I want to order the 6 cheapest clocks from the UK. I want to order 10 each'")
     
     if message:
         st.write("Answer:")

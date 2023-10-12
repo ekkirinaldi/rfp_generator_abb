@@ -6,4 +6,3 @@ tiktoken
 streamlit-chat
 streamlit
 chromadb
-pysqlite3-binary
