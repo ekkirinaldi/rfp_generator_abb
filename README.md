@@ -6,3 +6,5 @@ Built using:
 2. Strreamlit
 3. OpenAI API
 4. Native ChromaDB
+
+See the live demo here: https://gmailrfp-rjbancntea-uc.a.run.app/
