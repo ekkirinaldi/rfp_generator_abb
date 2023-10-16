@@ -13,7 +13,7 @@ def vectorize(data_path):
     )
     
     # Initialize ChromaDB & Create Collection
-    chroma_db = chromadb.Client(Settings(persist_directory="vectordb/"))
+    chroma_db = chromadb.PersistentClient(path="vectordb")
     collection = chroma_db.get_or_create_collection(name="rfp_generator", embedding_function=openai_ef)
 
     # Load Data
