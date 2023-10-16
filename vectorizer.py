@@ -21,7 +21,6 @@ def vectorize(data_path):
     data = loader.load()
 
     # Add Embeddings to Collection
-    # embeddings = [openai_ef(doc.page_content.replace("\n", " ")) for doc in data[:3]]
     docs = [doc.page_content.replace("\n", " ") for doc in data[:10000]]
     metadatas = [doc.metadata for doc in data[:10000]]
     ids = [str(id) for id in range(1, len(data[:10000])+1)]
